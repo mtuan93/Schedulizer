@@ -1,0 +1,69 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>The Schedulizer | About</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+<div class="wrap">
+<div class="wrapper">
+<div class="logo">
+	<a href="{% url 'main' %}"><h1>Schedulizer</h1></a>
+</div>
+<div class="header_right">
+	<div class="cssmenu">
+		<ul>
+ 			<li><a href="{% url 'main' %}"><span>Home</span></a></li>
+            <li class="active"><a href="{% url 'about' %}"><span>About</span></a></li>
+            <li><a href="{% url 'staff' %}"><span>Staff</span></a></li>
+            <li class="has-sub"><a href="{% url 'service' %}"><span>Services</span></a></li>
+            <li class="last"><a href="{% url 'contact' %}"><span>Contact</span></a></li>
+            <div class="clear"></div>		 	 	
+		 </ul>
+	</div>
+</div>
+	<div class="clear"></div>
+</div>
+</div>
+<div class="main_bg">
+<div class="wrap">
+<div class="wrapper">
+	<div class="main1">
+			<div class="grid_1_of_2 images_1_of_2">
+				<h2 class="style">About Schedulizer</h2>
+				<p class="para top">Some introducing about our project</p>
+			</div>
+			<div class="grid_1_of_2 images_1_of_2 img_style">
+				<img src="{% static 'images/pic3.jpg' %}" alt="">
+			</div>
+			<div class="clear"></div>
+	</div>
+</div>
+</div>
+</div>
+<div class="wrap">
+<div class="wrapper">
+	<div class="footer">
+		<div class="social-icons">
+	   		  	<ul>
+			      <li class="icon_1"><a href="#" target="_blank"> </a></li>
+			      <li class="icon_2"><a href="#" target="_blank"> </a></li>
+			      <li class="icon_3"><a href="#" target="_blank"> </a></li>
+			      <li class="icon_4"><a href="#" target="_blank"> </a></li>
+			      <div class="clear"></div>
+		     </ul>
+	   	 </div>
+		<a href="{% url 'main' %}"><h2>Schedulizer</h2></a>
+		<div class="copy">
+			<p class="w3-link">© All Rights Reserved | Design by&nbsp; <a href="http://www.pages.drexel.edu/~thn42"> Tuan Nguyen</a></p>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+</div>
+</body>
+</html>

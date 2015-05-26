@@ -1,0 +1,16 @@
+from django.db import models
+import datetime
+
+class course(models.Model):
+    term_name = models.CharField(max_length=10, null=True)
+    course_CRN = models.CharField(max_length=20, null=True)
+    subject_code = models.CharField(max_length=10) #ex: CS,MATH,CHEM,...
+    course_number = models.CharField(max_length=4) #ex: 270,280,...
+    course_section = models.CharField(max_length=10) #ex: 001,002,...
+    course_title = models.CharField(max_length=50) #exp: Introduction to Programming, Calculus 3,...
+    instructor = models.CharField(max_length=20) #exp: Bill Mongan,...
+    start_time = models.TimeField("Start Time")
+    end_time = models.TimeField("End Time")
+    dates_given = models.CharField(max_length=10) #ex: "MWF" -> Monday, Wednesday, and Friday
+    def __str__(self):              # __unicode__ on Pythonn 2
+        return self.course_CRN + " " + self.term_name

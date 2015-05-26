@@ -1,0 +1,224 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>The Schedulizer | Services</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />		
+		<link type="text/css" rel="stylesheet" href="{% static 'css/table.css' %}" />
+		<!--start lightbox -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.lightbox.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.lightbox.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+	  <script src="{% static 'js/jquery.min.js' %}"></script>
+	  <script src="{% static 'js/jquery-ui.js' %}"></script>
+		<script>
+		$(function() {
+		$( ".department" ).selectmenu();
+		$( ".course" ).selectmenu();
+		$( ".option" ).selectmenu();
+		$( "#add_course" ).click(function()
+		{
+			var c = parseInt($(".row_container:last").attr("id").charAt(3))
+			$( ".department" ).selectmenu();
+			$( ".course" ).selectmenu();
+			$( ".option" ).selectmenu();	
+			$(".course_table:last").find("ul").find("li").last().click(function()
+			{
+				if ($(".course_table > *").length > 2)
+				{
+					$(this).parent().parent().parent().remove();
+				}
+			});
+		});
+		$ (".remove").click(function()
+		{
+			if ($(".course_table > *").length > 2)
+			{
+				$(this).parent().parent().parent().remove();
+			}
+		});
+		});
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="wrapper">
+				<div class="logo">
+					<a href="{% url 'main' %}"><h1>Schedulizer</h1></a>
+				</div>
+				<div class="header_right">
+					<div class="cssmenu">
+						<ul>
+							<li><a href="{% url 'main' %}"><span>Home</span></a></li>
+                            <li><a href="{% url 'about' %}"><span>About</span></a></li>
+                            <li><a href="{% url 'staff' %}"><span>Staff</span></a></li>
+                            <li class="active"><a href="{% url 'service' %}"><span>Services</span></a></li>
+                            <li class="last"><a href="{% url 'contact' %}"><span>Contact</span></a></li>
+                            <div class="clear"></div>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="main_bg">
+			<div class="wrap">
+				<div class="wrapper">
+					<div class="main">
+						<div class="ser-main">
+							<h2 class="style">Our Services</h2>
+							<div class="main_text">
+								<form action="{% url 'submit_form' %}" method="POST">
+									{% csrf_token %}
+									<input hidden name="num_courses" val=0>
+								<h2><span>The Schedulizer Machine</span></h2>
+								<div style="margin:10px">
+									<a class="add-option" id="start-selector" href="javascript:addStart()" title="The earliest a class can start">Add a Start time</a>
+									<a class="add-option" id="end-selector" href="javascript:addEnd()" title="The latest a class can end">Add an End time</a>
+									<a class="add-option" id="day-selector" href="javascript:addDays()" title="Select days when not to have class">Limit Days</a>
+								</div>
+								<div id="restrictions-div">
+
+								</div>
+
+								<div class="course_table" id="form-row-parent">
+									<div class="column_title">
+										<ul class="column_list">
+											<li class="department_col">Department</li>
+											<li class="course_col">Course</li>
+											<li class="option_col">Optional?</li>
+										</ul>
+									</div>
+									<!-- insert 3 rows -->
+									
+								</div>
+								<div class="add_course"><a href="javascript:add_row()" id="add_course">Add another course</a>
+								<div class="submit"><span><button id="submit">Submit</a></span></div>
+							</form>
+							</div>
+						</div>
+						<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrap">
+			<div class="wrapper">
+				<div class="footer">
+					<div class="social-icons">
+						<ul>
+							<li class="icon_1"><a href="#" target="_blank"> </a></li>
+							<li class="icon_2"><a href="#" target="_blank"> </a></li>
+							<li class="icon_3"><a href="#" target="_blank"> </a></li>
+							<li class="icon_4"><a href="#" target="_blank"> </a></li>
+							<div class="clear"></div>
+						</ul>
+					</div>
+					<a href="{% url 'main' %}"><h2>Schedulizer</h2></a>
+					<div class="copy">
+						<p class="w3-link">© All Rights Reserved | Design by&nbsp; <a href="http://www.pages.drexel.edu/~thn42"> Tuan Nguyen</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+var num_rows_made = 1;
+
+function create_row(i){
+	return '<div class="row_container" id="row'+i+'">'+
+	'<div class="column_title">'+
+		'<ul class="column_list">'+
+			'<li class="department-col">'+
+				'<select class="department" name="department'+i+'">'+
+			  '<option disabled selected title="Select a department">...</option>'+
+		      {% for item in subject_codes %}
+		      	'<option>{{ item }}</option>'+
+		      {% endfor %}
+		    '</select>'+
+			'</li>'+
+			'<li class="course-col">'+
+				'<select class="course" name="number'+i+'">'+
+			  '<option disabled selected title="Select a department first">...</option>'+
+		    '</select>'+
+			'</li>'+
+			'<li class="option-col">'+
+				'<select class="option" name="option'+i+'">'+
+			  '<option value=0 selected>Required</option>'+
+		      '<option value=1>Optional</option>'+
+		    '</select>'+
+			'</li>'+
+			'<li class="remove"><a class="remove_but"> &#10006;</a></li>'+
+		'</ul>'+
+	'</div>'+
+'</div>'
+}
+
+function add_row(){
+	$("#form-row-parent").append(create_row(num_rows_made));
+	$('[name="department'+num_rows_made+'"]').selectmenu({change: function(){
+		id_num = $(this).attr('name').slice(-1);
+		selector = "[name='department" + id_num + "']";
+		department_listener(id_num, selector)}});
+	$('[name="number'+num_rows_made+'"]').selectmenu();
+	$('[name="option'+num_rows_made+'"]').selectmenu();
+	num_rows_made++;
+	$('[name="num_courses"]').val(num_rows_made);
+	$(".course_table:last").find("ul").find("li").last().click(function()
+			{
+				if ($(".course_table > *").length > 2)
+				{
+					$(this).parent().parent().parent().remove();
+				}
+			});
+}
+
+function department_listener(num, selector){
+	var val = $(selector).val()
+	var nums_selector = $('[name="number' + num + '"]');
+	{% for subject, codes in numbers_by_subject.items %}
+	if (val == "{{ subject }}"){
+		nums_selector.empty();
+		{% for code in codes %}
+			nums_selector.append("<option>{{ code }}</option>");
+		{% endfor %}
+	}
+	{% endfor %}
+
+	nums_selector.selectmenu("refresh");
+
+}
+
+add_row();
+add_row();
+add_row();
+
+function addStart(){
+	$('#restrictions-div').append("<div class='fonted'><p>Classes begin no earlier than: <input type='time' name='start_time' value='10:00:00'></p></div>")
+	$('#start-selector').hide();
+}
+
+function addEnd(){
+	$('#restrictions-div').append("<div class='fonted'><p>Classes end no later than: <input type='time' name='end_time' value='05:30:00'></p></div>");
+	$('#end-selector').hide();
+}
+
+function addDays(){
+	$('#restrictions-div').append("<div class='fonted'><p>Classes will <emph>NOT</emph> meet on:<br/>"+
+		"Mondays <input type='checkbox' name='no-mondays'><br/>" +
+		"Tuesdays <input type='checkbox' name='no-tuesdays'><br/>" +
+		"Wednesdays <input type='checkbox' name='no-wednesdays'><br/>" +
+		"Thursdays <input type='checkbox' name='no-thursdays'><br/>" +
+		"Fridays <input type='checkbox' name='no-fridays'><br/></p>");
+	$("#day-selector").hide();
+}
+</script>

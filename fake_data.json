@@ -1,0 +1,235 @@
+{
+  "Spring2015": [
+    {
+      "courseCRN": "000001",
+      "subjectCode": "CS",
+      "courseNumber": "275",
+      "courseSection": "001",
+      "courseTitle": "Introduction to Moble Web Developments",
+      "instructor": "Professor A",
+      "startTime": "12:00",
+      "endTime": "13:50",
+      "datesGiven": "MW"
+    },
+    {
+      "courseCRN": "000002",
+      "subjectCode": "CS",
+      "courseNumber": "275",
+      "courseSection": "002",
+      "courseTitle": "Introduction to Moble Web Developments",
+      "instructor": "Professor B",
+      "startTime": "15:00",
+      "endTime": "16:50",
+      "datesGiven": "TR"
+    },
+    {
+      "courseCRN": "000003",
+      "subjectCode": "CS",
+      "courseNumber": "360",
+      "courseSection": "001",
+      "courseTitle": "Programming Languages",
+      "instructor": "Professor C",
+      "startTime": "10:30",
+      "endTime": "12:00",
+      "datesGiven": "MW"
+    },
+    {
+      "courseCRN": "000004",
+      "subjectCode": "CS",
+      "courseNumber": "360",
+      "courseSection": "002",
+      "courseTitle": "Programming Languages",
+      "instructor": "Professor D",
+      "startTime": "13:00",
+      "endTime": "14:30",
+      "datesGiven": "TR"
+    },
+    {
+      "courseCRN": "000005",
+      "subjectCode": "MATH",
+      "courseNumber": "200",
+      "courseSection": "001",
+      "courseTitle": "Calculus 4",
+      "instructor": "Professor E",
+      "startTime": "13:00",
+      "endTime": "13:50",
+      "datesGiven": "MTWR"
+    },
+    {
+      "courseCRN": "000006",
+      "subjectCode": "MATH",
+      "courseNumber": "200",
+      "courseSection": "002",
+      "courseTitle": "Calculus 4",
+      "instructor": "Professor F",
+      "startTime": "10:00",
+      "endTime": "10:50",
+      "datesGiven": "MTWR"
+    },
+    {
+      "courseCRN": "000007",
+      "subjectCode": "MATH",
+      "courseNumber": "300",
+      "courseSection": "001",
+      "courseTitle": "Linear Algebra",
+      "instructor": "Professor G",
+      "startTime": "14:00",
+      "endTime": "15:20",
+      "datesGiven": "MW"
+    },
+    {
+      "courseCRN": "000008",
+      "subjectCode": "MATH",
+      "courseNumber": "300",
+      "courseSection": "002",
+      "courseTitle": "Linear Algebra",
+      "instructor": "Professor H",
+      "startTime": "11:00",
+      "endTime": "12:50",
+      "datesGiven": "TR"
+    },
+    {
+      "courseCRN": "000009",
+      "subjectCode": "PHYS",
+      "courseNumber": "101",
+      "courseSection": "001",
+      "courseTitle": "Introduction to Physics",
+      "instructor": "Professor I",
+      "startTime": "10:00",
+      "endTime": "10:50",
+      "datesGiven": "MWF"
+    },
+    {
+      "courseCRN": "000010",
+      "subjectCode": "PHYS",
+      "courseNumber": "101",
+      "courseSection": "002",
+      "courseTitle": "Introduction to Physics",
+      "instructor": "Professor J",
+      "startTime": "13:00",
+      "endTime": "13:50",
+      "datesGiven": "MWF"
+    },
+    {
+      "courseCRN": "000011",
+      "subjectCode": "PHYS",
+      "courseNumber": "201",
+      "courseSection": "001",
+      "courseTitle": "Advanced Physics",
+      "instructor": "Professor K",
+      "startTime": "12:00",
+      "endTime": "13:50",
+      "datesGiven": "TR"
+    },
+    {
+      "courseCRN": "000012",
+      "subjectCode": "PHYS",
+      "courseNumber": "201",
+      "courseSection": "002",
+      "courseTitle": "Advanced Physics",
+      "instructor": "Professor L",
+      "startTime": "15:00",
+      "endTime": "16:50",
+      "datesGiven": "MW"
+    },
+    {
+      "courseCRN": "000013",
+      "subjectCode": "CHEM",
+      "courseNumber": "102",
+      "courseSection": "001",
+      "courseTitle": "Principles of Chemistry 2",
+      "instructor": "Professor M",
+      "startTime": "12:00",
+      "endTime": "12:50",
+      "datesGiven": "MWF"
+    },
+    {
+      "courseCRN": "000014",
+      "subjectCode": "CHEM",
+      "courseNumber": "102",
+      "courseSection": "002",
+      "courseTitle": "Principles of Chemistry 2",
+      "instructor": "Professor N",
+      "startTime": "10:00",
+      "endTime": "10:50",
+      "datesGiven": "MWF"
+    },
+    {
+      "courseCRN": "000015",
+      "subjectCode": "CHEM",
+      "courseNumber": "200",
+      "courseSection": "001",
+      "courseTitle": "Advanced Chemistry",
+      "instructor": "Professor O",
+      "startTime": "12:00",
+      "endTime": "13:50",
+      "datesGiven": "TR"
+    },
+    {
+      "courseCRN": "000016",
+      "subjectCode": "CHEM",
+      "courseNumber": "200",
+      "courseSection": "002",
+      "courseTitle": "Advanced Chemistry",
+      "instructor": "Professor P",
+      "startTime": "14:00",
+      "endTime": "15:50",
+      "datesGiven": "MW"
+    },
+    {
+      "courseCRN": "000017",
+      "subjectCode": "ENG",
+      "courseNumber": "101",
+      "courseSection": "001",
+      "courseTitle": "English Composition I",
+      "instructor": "Professor Q",
+      "startTime": "11:00",
+      "endTime": "13:00",
+      "datesGiven": "TR"
+    },
+    {
+      "courseCRN": "000018",
+      "subjectCode": "ENG",
+      "courseNumber": "101",
+      "courseSection": "002",
+      "courseTitle": "English Composition I",
+      "instructor": "Professor R",
+      "startTime": "15:00",
+      "endTime": "17:00",
+      "datesGiven": "TR"
+    },
+    {
+      "courseCRN": "000019",
+      "subjectCode": "ENG",
+      "courseNumber": "102",
+      "courseSection": "001",
+      "courseTitle": "English Composition II",
+      "instructor": "Professor S",
+      "startTime": "9:00",
+      "endTime": "10:50",
+      "datesGiven": "TR"
+    },
+    {
+      "courseCRN": "000020",
+      "subjectCode": "ENG",
+      "courseNumber": "102",
+      "courseSection": "002",
+      "courseTitle": "English Composition II",
+      "instructor": "Professor T",
+      "startTime": "13:00",
+      "endTime": "14:50",
+      "datesGiven": "MW"
+    },
+    {
+      "courseCRN": "000021",
+      "subjectCode": "CS",
+      "courseNumber": "171",
+      "courseSection": "001",
+      "courseTitle": "Introduction to Programming",
+      "instructor": "Professor U",
+      "startTime": "13:00",
+      "endTime": "16:50",
+      "datesGiven": "W"
+    }
+  ]
+}

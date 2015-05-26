@@ -1,0 +1,109 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>The Schedulizer | Contact</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+<div class="wrap">
+<div class="wrapper">
+<div class="logo">
+	<a href="{% url 'main' %}"><h1>Schedulizer</h1></a>
+</div>
+<div class="header_right">
+	<div class="cssmenu">
+		<ul>
+			 <li><a href="{% url 'main' %}"><span>Home</span></a></li>
+            <li><a href="{% url 'about' %}"><span>About</span></a></li>
+            <li><a href="{% url 'staff' %}"><span>Staff</span></a></li>
+            <li class="has-sub"><a href="{% url 'service' %}"><span>Services</span></a></li>
+           	<li class="last active"><a href="{% url 'contact' %}"><span>Contact</span></a></li>
+            <div class="clear"></div>
+		</ul>
+	</div>
+</div>
+	<div class="clear"></div>
+</div>
+</div>
+<div class="main_bg">
+<div class="wrap">
+<div class="wrapper">
+<div class="main">
+		<div class="section group">				
+				<div class="col span_1_of_2">
+					<div class="contact_info">
+			    	 	<h2 class="style">Find Us Here</h2>
+			    	 		<div class="map">
+					   			<img src="http://maps.google.com/maps/api/staticmap?center=39.956375,-75.189976&zoom=16&markers=39.956613,-75.189944&size=834x300&sensor=TRUE_OR_FALSE">
+					   			<br><small><a href="https://www.google.com/maps/place/Drexel+University/@39.956613,-75.189944,17z/data=!3m1!4b1!4m2!3m1!1s0x89c6c64e4847c029:0xef32de4043c30f0">View Larger Map</a></small>
+					   		</div>
+      				</div>
+      			<div class="company_address">
+				     	<h2 class="style">Our Address </h2>
+						<p>Drexel University</p>
+						<p>Schedulizer Group</p>
+						<p>USA</p>
+				   		<p>Phone:000 000 000</p>
+				 	 	<p>Email: <span>mtuan93@gmail.com</span></p>
+				   		<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+				   </div>
+				   <div class="clear"></div>
+				</div>				
+				<div class="col span_2_of_4">
+				  <div class="contact-form">
+				  	<h2 class="style">Contact Us</h2>
+					       <form method="post" action="contact-post.html">
+					    	<div>
+						    	<span><label>NAME</label></span>
+						    	<span><input name="userName" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>E-MAIL</label></span>
+						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						     	<span><label>MOBILE</label></span>
+						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>SUBJECT</label></span>
+						    	<span><textarea name="userMsg"> </textarea></span>
+						    </div>
+						   <div>
+						   		<a href="" class="btn btn_s">send me</a>
+						  </div>
+					    </form>
+				    </div>
+  				</div>		
+  			<div class="clear"></div>
+		  </div>
+	</div>
+</div>
+</div>
+</div>
+<div class="wrap">
+<div class="wrapper">
+	<div class="footer">
+		<div class="social-icons">
+	   		  	<ul>
+			      <li class="icon_1"><a href="#" target="_blank"> </a></li>
+			      <li class="icon_2"><a href="#" target="_blank"> </a></li>
+			      <li class="icon_3"><a href="#" target="_blank"> </a></li>
+			      <li class="icon_4"><a href="#" target="_blank"> </a></li>
+			      <div class="clear"></div>
+		     </ul>
+	   	 </div>
+		<a href="{% url 'main' %}"><h2>Schedulizer</h2></a>
+		<div class="copy">
+			<p class="w3-link">© All Rights Reserved | Design by&nbsp; <a href="http://www.pages.drexel.edu/~thn42"> Tuan Nguyen</a></p>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+</div>
+</body>
+</html>
